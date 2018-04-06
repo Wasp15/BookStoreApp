@@ -31,31 +31,31 @@ public final class BookContract {
          * Name of said product
          * Type: INTEGER
          */
-        public final static String COLUMN_PRODUCT_NAME = "Product Name";
+        public final static String COLUMN_PRODUCT_NAME = "name";
 
         /**
          * Price of said product
          * Type: TEXT
          */
-        public final static String COLUMN_PRODUCT_PRICE = "Price";
+        public final static String COLUMN_PRODUCT_PRICE = "price";
 
         /**
          * Quantity available of said product
          * Type: INTEGER
          */
-        public final static String COLUMN_PRODUCT_QUANTITY = "Quantity";
+        public final static String COLUMN_PRODUCT_QUANTITY = "quantity";
 
         /**
          * Supplier name of said product
          * Type: TEXT
          */
-        public final static String COLUMN_SUPPLIER_NAME = "Supplier Name";
+        public final static String COLUMN_SUPPLIER_NAME = "supplier";
 
         /**
          * Phone number of said supplier
          * Type: TEXT
          */
-        public final static String COLUMN_SUPPLIER_CONTACT = "Supplier Phone Number";
+        public final static String COLUMN_SUPPLIER_CONTACT = "contact";
     }
 }
 
