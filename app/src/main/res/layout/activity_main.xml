@@ -1,19 +1,64 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CatalogActivity">
 
-    <TextView
-        android:id="@+id/display_view"
+    <ListView
+        android:id="@+id/list_view_book"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Empty view for the list -->
+    <RelativeLayout
+        android:id="@+id/empty_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_centerInParent="true">
 
-</android.support.constraint.ConstraintLayout>
+        <ImageView
+            android:id="@+id/empty_inventory_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/books" />
+
+        <TextView
+            android:id="@+id/empty_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/empty_inventory_image"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="16dp"
+            android:text="@string/inventory_empty_message"
+            android:textAppearance="?android:textAppearanceMedium"
+            app:fontFamily="sans-serif-medium" />
+
+        <TextView
+            android:id="@+id/empty_subtitle_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/empty_title_text"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="8dp"
+            android:text="@string/get_started_by_adding_some_books"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="#A2AAB0"
+            app:fontFamily="@string/sans_serif" />
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_library_add_white_24dp"
+        app:backgroundTint="@color/colorPrimary"
+        app:borderWidth="0dp"
+        app:elevation="20dp" />
+
+</RelativeLayout>
 

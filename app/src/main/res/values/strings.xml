@@ -1,4 +1,47 @@
 <resources>
     <string name="app_name">BookStoreApp</string>
     <string name="app_name_book_store">Book Store</string>
+    <string name="overview">Overview</string>
+    <string name="book_name_hint">Enter book name</string>
+    <string name="edit_author_name">Enter author name</string>
+    <string name="enter_supplier_name">Enter supplier name</string>
+    <string name="enter_supplier_contact">Enter supplier contact</string>
+    <string name="enter_book_price">Enter book price</string>
+    <string name="enter_book_quantity">Enter book quantity</string>
+    <string name="buy">Buy</string>
+    <string name="add_book_app_bar_label">Add a book</string>
+    <string name="edit_book_app_bar_title">Edit book</string>
+    <string name="action_genre">Action</string>
+    <string name="adventure_genre">Adventure</string>
+    <string name="drama_genre">Drama</string>
+    <string name="comedy_genre">Comedy</string>
+    <string name="horror_genre">Horror</string>
+    <string name="romance_genre">Romance</string>
+    <string name="satire_genre">Satire</string>
+    <string name="tragedy_genre">Tragedy</string>
+    <string name="fantasy_genre">Fantasy</string>
+    <string name="mythology_genre">Mythology</string>
+    <string name="unknown_genre">Unknown</string>
+    <string name="saved_toast">Book saved</string>
+    <string name="error_toast">Error with saving book</string>
+    <string name="edit_book_error_toast">Error with editing book</string>
+    <string name="edit_book_successful_toast">Successfully updated book</string>
+    <string name="action_save">Save</string>
+    <string name="action_delete">Delete</string>
+    <string name="discard_alert_message">Discard your changes and quit editing?</string>
+    <string name="positive_button_message">Discard</string>
+    <string name="negative_button_message">Keep Editing</string>
+    <string name="error_deleting_book">Error deleting book</string>
+    <string name="book_success_delete">Book deleted</string>
+    <string name="delete_dialog_message">Delete this book?</string>
+    <string name="delete_dialog_option">Delete</string>
+    <string name="cancel_dialog_option">Cancel</string>
+    <string name="out_of_stock">Out of stock</string>
+    <string name="available_new">available</string>
+    <string name="dollar_sign">$</string>
+    <string name="negative_stock_toast">Cannot have negative stock!</string>
+    <string name="get_started_by_adding_some_books">Get started by adding some books!</string>
+    <string name="sans_serif">sans-serif</string>
+    <string name="inventory_empty_message">This inventory is quite empty...</string>
 </resources>
+
