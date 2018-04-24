@@ -2,17 +2,14 @@ package com.enterprises.wasp.bookstoreapp;
 
 import android.app.LoaderManager;
 import android.content.ContentUris;
-import android.content.ContentValues;
 import android.content.CursorLoader;
 import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
@@ -85,28 +82,6 @@ public class CatalogActivity extends AppCompatActivity
 
         // Kick off loader
         getLoaderManager().initLoader(BOOK_LOADER, null, this);
-    }
-
-    private void insertBook() {
-        SQLiteDatabase db = bookDbHelper.getWritableDatabase();
-
-        ContentValues values = new ContentValues();
-        values.put(BookContract.BookEntry.COLUMN_PRODUCT_NAME, "LOTR");
-        values.put(BookContract.BookEntry.COLUMN_PRODUCT_PRICE, 25);
-        values.put(BookContract.BookEntry.COLUMN_PRODUCT_QUANTITY, 5);
-        values.put(BookContract.BookEntry.COLUMN_SUPPLIER_NAME, "Amazon");
-        values.put(BookContract.BookEntry.COLUMN_SUPPLIER_CONTACT, "021 875 2342");
-
-        long newRowId = db.insert(BookContract.BookEntry.TABLE_NAME, null, values);
-    }
-
-    /**
-     * Helper method to delete all books in the database
-     */
-    private void deleteAllBooks() {
-        int rowsDeleted = getContentResolver().delete
-                (BookContract.BookEntry.CONTENT_URI, null, null);
-        Log.v("CatalogActivity", rowsDeleted + " rows deleted from book database");
     }
 
     @Override

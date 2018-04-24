@@ -35,13 +35,13 @@ public class BookDbHelper extends SQLiteOpenHelper {
         // Create a string that contains the SQL statements to create the inventory database.
         String SQL_CREATE_INVENTORY_TABLE = "CREATE TABLE " + BookContract.BookEntry.TABLE_NAME
                 + " (" + BookContract.BookEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-                + BookContract.BookEntry.COLUMN_PRODUCT_NAME + " TEXT, "
-                + BookContract.BookEntry.COLUMN_PRODUCT_GENRE + " TEXT, "
-                + BookContract.BookEntry.COLUMN_PRODUCT_AUTHOR + " TEXT, "
-                + BookContract.BookEntry.COLUMN_PRODUCT_PRICE + " INTEGER, "
-                + BookContract.BookEntry.COLUMN_PRODUCT_QUANTITY + " INTEGER, "
-                + BookContract.BookEntry.COLUMN_SUPPLIER_NAME + " TEXT, "
-                + BookContract.BookEntry.COLUMN_SUPPLIER_CONTACT + " TEXT);";
+                + BookContract.BookEntry.COLUMN_PRODUCT_NAME + " TEXT NOT NULL, "
+                + BookContract.BookEntry.COLUMN_PRODUCT_GENRE + " TEXT NOT NULL, "
+                + BookContract.BookEntry.COLUMN_PRODUCT_AUTHOR + " TEXT NOT NULL, "
+                + BookContract.BookEntry.COLUMN_PRODUCT_PRICE + " REAL NOT NULL, "
+                + BookContract.BookEntry.COLUMN_PRODUCT_QUANTITY + " INTEGER NOT NULL, "
+                + BookContract.BookEntry.COLUMN_SUPPLIER_NAME + " TEXT NOT NULL, "
+                + BookContract.BookEntry.COLUMN_SUPPLIER_CONTACT + " TEXT NOT NULL);";
 
         // Execute the SQL statement
         db.execSQL(SQL_CREATE_INVENTORY_TABLE);

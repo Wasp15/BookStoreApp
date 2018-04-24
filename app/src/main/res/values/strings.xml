@@ -43,5 +43,7 @@
     <string name="get_started_by_adding_some_books">Get started by adding some books!</string>
     <string name="sans_serif">sans-serif</string>
     <string name="inventory_empty_message">This inventory is quite empty...</string>
+    <string name="number_supplier_warning_toast">No number present for supplier</string>
+    <string name="tel">tel:</string>
 </resources>
 

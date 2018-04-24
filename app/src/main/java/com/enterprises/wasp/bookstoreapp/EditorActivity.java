@@ -107,10 +107,10 @@ public class EditorActivity extends AppCompatActivity
                 String contactString = contactEditText.getText().toString().trim();
                 if (TextUtils.isEmpty(contactString))
                     Toast.makeText(EditorActivity.this,
-                            "No number present for supplier", Toast.LENGTH_SHORT).show();
+                            R.string.number_supplier_warning_toast, Toast.LENGTH_SHORT).show();
                 else {
                     Intent intent = new Intent(Intent.ACTION_DIAL);
-                    intent.setData(Uri.parse("tel:" + contactString));
+                    intent.setData(Uri.parse(getString(R.string.tel) + contactString));
                     startActivity(intent);
                 }
             }
@@ -212,7 +212,7 @@ public class EditorActivity extends AppCompatActivity
         String authorString = authorEditText.getText().toString().trim();
         String supplierString = supplierEditText.getText().toString().trim();
         String contactString = contactEditText.getText().toString().trim();
-        int bookPrice = Integer.parseInt(priceEditText.getText().toString().trim());
+        double bookPrice = Double.parseDouble(priceEditText.getText().toString().trim());
         int bookQuantity = Integer.parseInt(quantityEditText.getText().toString().trim());
 
         // Create a content values object where column names are the keys,
@@ -501,7 +501,7 @@ public class EditorActivity extends AppCompatActivity
             String supplier = cursor.getString(supplierColumnIndex);
             String contact = cursor.getString(contactColumnIndex);
             int genre = cursor.getInt(genreColumnIndex);
-            int price = cursor.getInt(priceColumnIndex);
+            Double price = cursor.getDouble(priceColumnIndex);
             quantity += cursor.getInt(quantityColumnIndex);
 
             // Update the views on the screen with the values from the database
